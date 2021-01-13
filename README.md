@@ -9,5 +9,6 @@ The current format of the labels are (class, x1, y1, x2, y2), where x1, y1 are t
 ## Required Features:
 * Image shape -> 128x128x3
 * The Image is split into 8x8 patches with each representing a 16x16 grid.
+* There are 8 channels for each anchor box, which encode Pr(Objectness), x, y, w, h, P(class=pedestrian), P(class=traffic light), and P(class=car).
 * Each grid is responsible for detecting the object whose center falls into the grid.
-* For each anchor, there are 8 channels, which encode Pr(Objectness), x, y, w, h, P(class=pedestrian), P(class=traffic light), and P(class=car).
+* Non-Maximum Suppression(NMS) is performed to filter unnecessary/overlapping boxes. 
